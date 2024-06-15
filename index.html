@@ -1,0 +1,500 @@
+  
+  <!--//OTURUM AÇMA BİLGİLERİ: Kullanıcı Adı:123 Şifre:123-->
+  
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sürükle ve Bırak</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+  </head>
+  <body>  
+
+    
+  <div class="logo-container">
+      <img src="../SistemAnaliziDragProject/logo.jpg" alt="Logo" class="logo"> 
+      <div class="marka">
+        <h1>SÜRÜKLE BIRAK</h1> 
+          </div>
+        
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="options">
+          <!-- Sol taraftaki seçenekler -->
+          <div class="list-group">
+
+            
+            <!-- Başlık'ı sürüklemek için --> 
+            <div class="list-group-item list-group-item-action draggable" data-html='
+              <div class="page-header" contenteditable="true">
+                <h1>BAŞLIK <small>BURAYA</small></h1>
+                <button type="button" class="remove-item btn btn-danger btn-sm">Kaldır</button>
+              </div>' data-name="Başlık">Header
+              </div>
+            <!-- Form'u sürüklemek için -->
+            <div class="list-group-item list-group-item-action draggable" data-html='
+            <form role="form">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Şifre</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" />
+              </div>
+              <button type="submit" class="btn btn-primary">Gönder</button>
+              <button type="button" class="remove-item btn btn-danger btn-sm">Kaldır</button>
+            </form>' data-name="Form">Form</div>
+
+            <!-- Sayfalandırma'yı sürüklemek için -->
+            <div class="list-group-item list-group-item-action draggable" data-html='
+              <nav>
+                <ul class="pagination" contenteditable="true">
+                  <li class="page-item">
+                    <a class="page-link" href="#">Önceki</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">4</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">5</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Sonraki</a>
+                  </li>
+                </ul>
+                <button type="button" class="remove-item btn btn-danger btn-sm">Kaldır</button>
+              </nav>' data-name="Sayfalandırma">Pagination</div>
+            <!-- Paragraf'ı sürüklemek için -->
+            <div class="list-group-item list-group-item-action draggable" data-html='
+              <p contenteditable="true">  
+                Paragraf giriniz. <strong>Paragraf giriniz.</strong>Paragraf giriniz. Paragraf giriniz. Paragraf giriniz. </small>
+                <button type="button" class="remove-item btn btn-danger btn-sm">Kaldır</button>
+              </p>' data-name="Paragraf">Paragraph</div>
+
+
+              <!-- Adres'i sürüklemek için -->
+              <div class="list-group-item list-group-item-action draggable" data-html='
+                <address contenteditable="true">
+                  <button type="button" class="remove-item btn btn-danger btn-sm">Kaldır</button> <p></p>
+                  <strong>X Şirketi</strong><br /> cadde, sokak<br /> Ankara, Çankaya<br /> <abbr title="Phone">Telefon :</abbr> 555-555-555
+                </address>' data-name="Adres">Adress</div>
+              <!-- Liste'yi sürüklemek için -->
+              <div class="list-group-item list-group-item-action draggable" data-html='
+                <ol contenteditable="true">
+                  <li class="list-item">Madde giriniz..</li>
+                  <li class="list-item">Madde giriniz..</li>
+                  <li class="list-item">Madde giriniz..</li>
+                  <li class="list-item">Madde giriniz..</li>
+                  <li class="list-item">Madde giriniz..</li>
+                  <li class="list-item">Madde giriniz..</li>
+                  <li class="list-item">Madde giriniz..</li>
+                  <li class="list-item">Madde giriniz..</li>
+                  <button type="button" class="remove-item btn btn-danger btn-sm">Kaldır</button>
+                </ol>' data-name="Liste">List</div>
+              <!-- Tablo'yu sürüklemek için -->
+              <div class="list-group-item list-group-item-action draggable" data-html='
+              <div class="table-container">
+                  <table class="table" contenteditable="true">
+                      <thead>
+                          <tr>
+                              <th>#</th>
+                              <th>Ürün</th>
+                              <th>Ödeme Alındı</th>
+                              <th>Durum</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>1</td>
+                              <td>TB - Aylık</td>
+                              <td>01/04/2012</td>
+                              <td>Varsayılan</td>
+                          </tr>
+                          <tr class="table-active">
+                              <td>1</td>
+                              <td>TB - Aylık</td>
+                              <td>01/04/2012</td>
+                              <td>Onaylı</td>
+                          </tr>
+                          <tr class="table-success">
+                              <td>2</td>
+                              <td>TB - Aylık</td>
+                              <td>02/04/2012</td>
+                              <td>Reddedildi</td>
+                          </tr>
+                          <tr class="table-warning">
+                              <td>3</td>
+                              <td>TB - Aylık</td>
+                              <td>03/04/2012</td>
+                              <td>Askıda</td>
+                          </tr>
+                          <tr class="table-danger">
+                              <td>4</td>
+                              <td>TB - Aylık</td>
+                              <td>04/04/2012</td>
+                              <td>Onay için arayın</td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  <button type="button" class="remove-item btn btn-danger btn-sm">Kaldır</button>
+              </div>
+          ' data-name="Tablo">Table</div>
+          
+              <!-- Buton'u sürüklemek için -->
+              <div class="list-group-item list-group-item-action draggable" data-html='
+              <div class="button-container">
+              <button type="button" class="btn btn-success draggable-button" contenteditable="true">Button</button>
+              <button type="button" class="remove-item btn btn-danger btn-sm">Kaldır</button>
+              </div>
+              'data-name="Buton">Button</div>
+
+
+              <!-- Anchor Buton'u sürüklemek için -->
+            <div class="list-group-item list-group-item-action draggable" data-html='
+            <div class="view">
+                <a href="#" class="btn btn-secondary" type="button" contenteditable="true">Button</a>           
+            <button type="button" class="remove-item btn btn-danger btn-sm">Kaldır</button>
+            </div>
+                'data-name="Anchor Button">Anchor Button</div>
+
+              <!-- Button Group sürüklemek için -->
+              <div class="list-group-item list-group-item-action draggable" data-html='
+              <div class="view">
+                  <div class="btn-group" role="group">
+                    <button class="btn btn-secondary" type="button">Sol</button>  
+                    <button class="btn btn-secondary" type="button">Merkez</button>
+                    <button class="btn btn-secondary" type="button">Sağ</button>
+                    <button class="btn btn-secondary" type="button">Ayarla</button>
+                    
+                  </div>
+                  <button type="button" class="remove-item btn btn-danger btn-sm">Kaldır</button>
+              </div>
+          'data-name="Button Group">Button Group</div>
+
+
+            <!-- Etiket'i sürüklemek için -->
+            <div class="list-group-item list-group-item-action draggable" data-html='
+            <div class="label-container">
+                <span class="badge badge-default draggable-label" contenteditable="true">Etiket</span>
+                <button type="button" class="remove-item btn btn-danger btn-sm">Kaldır</button>
+            </div>
+        ' data-name="Etiket">Label</div>
+
+        <!-- Description sürüklemek için -->
+
+        <div class="list-group-item list-group-item-action draggable" data-html='
+      <dl contenteditable="true">
+        <dt>Açıklama Listesi</dt>
+        <dd>.......................</dd>
+        <dt>Örnek</dt>
+        <dd>.......................</dd>
+        <dd>.......................</dd>
+        <dt>Örnek</dt>
+        <dd>.......................</dd>
+        <dt>Örnek</dt>
+        <dd>.......................</dd>
+              <button type="button" class="remove-item btn btn-danger btn-sm">Kaldır</button>
+      </dl>    
+      </div>' data-name="Description">Description</div>
+    
+
+      <!-- Blockquote'ı sürüklemek için -->
+        <div class="list-group-item list-group-item-action draggable" data-html='
+    <div class="view">
+        <blockquote class="blockquote" contenteditable="false">
+        <p class="mb-0">En hakiki mürşit ilimdir.</p>
+        <footer class="blockquote-footer">Mustafa Kemal ATATÜRK <cite title="Source Title"></cite></footer>
+      </blockquote>
+          <button type="button" class="remove-item btn btn-danger btn-sm">Kaldır</button>
+    </div>' data-name="Blockquote">Blockquote</div>
+    <!-- Breadcrumb sürüklemek için -->
+    <div class="list-group-item list-group-item-action draggable" data-html='
+    <div class="view">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a contenteditable="true" href="#">Anasayfa</a></li>
+        <li class="breadcrumb-item"><a contenteditable="true" href="#">Kütüphane</a></li>
+        <li class="breadcrumb-item active" contenteditable="true" aria-current="page">Veri</li>
+      </ol>
+    </nav>
+        <button type="button" class="remove-item btn btn-danger btn-sm">Kaldır</button>
+  </div>' data-name="breadcrumb">Breadcrumb</div>
+      
+
+        <!-- Badge sürüklemek için -->
+    <div class="list-group-item list-group-item-action draggable" data-html='
+    <div class="view">
+        <ul class="nav nav-pills" contenteditable="true">
+          <li class="nav-item">
+            <a class="nav-link btn btn-primary" href="#">
+              Anasayfa <span class="badge badge-light">42</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              Daha fazla <span class="badge badge-secondary">16</span>
+            </a>
+          </li>
+        </ul>
+        <button type="button" class="remove-item btn btn-danger btn-sm">Kaldır</button>
+        </div>' data-name="badge">Badge</div>
+
+        <!-- Thumbnail sürüklemek için -->
+        <div class="list-group-item list-group-item-action draggable" data-html='
+        <div class="view">
+            <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" alt="Bootstrap Thumbnail First" src="C:\Users\bilge\OneDrive\Masaüstü\COMODO\dragSite\2.jpg">
+              <div class="card-block" contenteditable="true">
+                <h5 class="card-title">Kart Başlığı</h5>
+                <p class="card-text">.....................</p>
+                <p><a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" alt="Bootstrap Thumbnail Second" src="C:\Users\bilge\OneDrive\Masaüstü\COMODO\dragSite\6.jpg">
+              <div class="card-block" contenteditable="true">
+                <h5 class="card-title">Kart Başlığı</h5>
+                <p class="card-text">......................</p>
+                <p><a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" alt="Bootstrap Thumbnail Third" src="C:\Users\bilge\OneDrive\Masaüstü\COMODO\dragSite\7.jpg">
+              <div class="card-block" contenteditable="true">
+                <h5 class="card-title">Kart Başlığı</h5>
+                <p class="card-text">.......................</p>
+                <p><a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a></p>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="remove-item btn btn-danger btn-sm">Kaldır</button>
+        </div>' data-name="Thumbnails">Thumbnails</div>
+
+        <!-- Progress Bar sürüklemek için -->
+        <div class="list-group-item list-group-item-action draggable" data-html='
+        <div class="view">
+            <div class="progress">
+                <div class="progress-bar w-75" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <button type="button" class="remove-item btn btn-danger btn-sm">Kaldır</button>        
+        </div>' data-name="ProgressBar">Progress Bar</div>
+
+        <!-- Carousel sürüklemek için -->  
+        <div class="list-group-item list-group-item-action draggable" data-html='
+        <div class="view">
+            <button type="button" class="remove-item btn btn-danger btn-sm">Kaldır</button> 
+            <div class="carousel slide" id="myCarousel" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-slide-to="0" data-target="#myCarousel" class="active"></li>
+                <li data-slide-to="1" data-target="#myCarousel" class=""></li>
+                <li data-slide-to="2" data-target="#myCarousel" class=""></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">                              
+                  <img class="d-block w-100" alt="Carousel Bootstrap First" src="C:\Users\bilge\OneDrive\Masaüstü\COMODO\dragSite\6.jpg">
+                  <div class="carousel-caption">
+                    <h4>KÜÇÜK RESİM PANEL</h4>
+                    <p>açıklama,açıklama,açıklama,açıklama,açıklama,açıklama,açıklama,açıklama.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" alt="Carousel Bootstrap Second" src="C:\Users\bilge\OneDrive\Masaüstü\COMODO\dragSite\2.jpg">
+                  <div class="carousel-caption">
+                    <h4>KÜÇÜK RESİM PANEL</h4>
+                    <p>açıklama,açıklama,açıklama,açıklama,açıklama,açıklama,açıklama,açıklama</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block w-100" alt="Carousel Bootstrap Third" src="C:\Users\bilge\OneDrive\Masaüstü\COMODO\dragSite\7.jpg">
+                  <div class="carousel-caption">
+                    <h4>KÜÇÜK RESİM PANEL</h4>
+                    <p>açıklama,açıklama,açıklama,açıklama,açıklama,açıklama,açıklama,açıklama</p>
+                  </div>
+                </div>
+              </div>
+        
+              <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>' data-name="Carousel">Carousel</div>
+
+            <!-- Alert sürüklemek için -->
+            <div class="list-group-item list-group-item-action draggable" data-html='
+            <div class="view">
+                <div class="alert alert-success alert-danger" contenteditable="true">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <h4>Uyarı!</h4>
+                    <strong>Uyarı! </strong>En iyisi kendini kontrol et, pek iyi görünmüyorsun. <a href="#" class="alert-link">Uyarı bağlantısı</a>
+                </div>
+                <button type="button" class="remove-item btn btn-danger btn-sm">Kaldır</button>
+            </div>' data-name="Alerts">Alerts</div>
+
+            <!-- Tabs sürüklemek için --> 
+            <div class="list-group-item list-group-item-action draggable" data-html='        
+            <div class="view">
+                <div class="tabbable" id="myTabs"> <!-- Only required for left/right tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item"><a class="nav-link active" href="#tab1" data-toggle="tab" contenteditable="true">Bölüm 1</a></li>
+                        <li class="nav-item"><a class="nav-link"href="#tab2" data-toggle="tab" contenteditable="true">Bölüm 2</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab1">
+                            <p contenteditable="true">1. bölüm açıklaması</p>
+                        </div>
+                        <div class="tab-pane" id="tab2">
+                            <p contenteditable="true">2. bölüm açıklaması</p>
+                        </div>
+                    </div>
+                    <button type="button" class="remove-item btn btn-danger btn-sm">Kaldır</button>
+                </div>' data-name="Tabs">Tabs</div>
+          
+            <!-- Kart'ı sürüklemek için -->
+            <div class="list-group-item list-group-item-action draggable" data-html='
+              <div class="card" contenteditable="true">
+                <h5 class="card-header">Kart Başlığı</h5>
+                <div class="card-body">
+                  <p class="card-text">Kart içeriği.</p>
+                </div>
+                <div class="card-footer">Kart altbilgisi</div>
+                <button type="button" class="remove-item btn btn-danger btn-sm">Kaldır</button>
+              </div>' data-name="Kart">Cards</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <!-- Sağ taraftaki sürükleme alanı -->
+        <div class="droppable" id="drop-area" style="display: none;">
+            SÜRÜKLE BIRAK APP
+          </div>
+
+          
+          
+        <!-- Oturum açma formu -->
+        <div id="login-form">
+          <h2>Oturum Aç</h2>
+          <div class="form-group">
+            <label for="username">Kullanıcı Adı:</label>
+            <input type="text" class="form-control" id="username" placeholder="Kullanıcı adınızı girin">
+          </div>
+          <div class="form-group">
+            <label for="password">Şifre:</label>
+            <input type="password" class="form-control" id="password" placeholder="Şifrenizi girin">
+          </div>
+          <button type="button" class="btn btn-primary" id="login-btn">Oturum Aç</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+
+    
+
+  $(document).ready(function () {
+      var isLoggedIn = false; // Kullanıcının oturum açıp açılmadığını takip eder
+      var localStorageKey = "userEdits";
+
+      // Oturum açma butonuna tıklanınca yapılacaklar
+      $("#login-btn").on("click", function () {
+        var username = $("#username").val();
+        var password = $("#password").val();
+        // Kullanıcı adı ve şifre kontrolü
+        
+        if (username === "123" && password === "123") {
+          isLoggedIn = true;
+          $("#login-form").hide();
+          $("#drop-area").show(); // Sürükle ve Bırak alanını göster
+          initializeDraggable();
+          //loadUserEdits();
+        } else {
+          alert("Geçersiz kullanıcı adı veya şifre!");
+        }
+      });
+
+      // Sürükleme işlevselliğini başlatır
+      function initializeDraggable() {
+        $(".draggable").draggable({
+          helper: 'clone', // Sürüklenen öğelerin kopyasını oluşturur
+          revert: 'invalid', // Geçersiz bırakma durumunda sürüklenen öğenin orijinal konumuna geri dönmesini sağlar
+          cursor: 'move', // Sürükleme işlemi sırasında farenin imleci taşıma işareti olur
+          containment: 'body' // Sürükleme alanını sınırlar
+        });
+
+        $("#drop-area").droppable({
+          drop: function (event, ui) {
+            if (isLoggedIn) {
+              var htmlContent = ui.helper.data("html");
+              $(this).append(htmlContent);
+              saveUserEdits();
+            } else {
+              alert("Lütfen önce oturum açın!");
+            }
+          }
+        });
+
+        // Remove butonlarına tıklanınca yapılacaklar
+        $("#drop-area").on("click", ".remove-item", function() {
+          $(this).parent().remove(); // Butonun parentını (yani list öğesini) kaldırır
+          saveUserEdits(); // Kullanıcının yaptığı değişiklikleri kaydeder
+        });
+      }
+
+      // Kullanıcının yaptığı düzenlemeleri yerel depolamada saklar
+      function saveUserEdits() {
+        
+        var userEdits = $("#drop-area").html();
+        localStorage.setItem(localStorageKey, userEdits);
+      }
+
+      // Yerel depolamadaki kullanıcı düzenlemelerini yükler
+      function loadUserEdits() {
+        var userEdits = localStorage.getItem(localStorageKey);
+        if (userEdits) {
+          $("#drop-area").html(userEdits);
+        }
+      }
+
+      // Metin içeriğindeki değişiklikleri izler ve kaydeder
+      $("#drop-area").on("input", "[contenteditable='true']", function () {
+        if (isLoggedIn) {
+          saveUserEdits();
+        } else {
+          alert("Lütfen önce oturum açın!");
+        }
+      });
+    });
+
+  </script>
+  </body>
+  </html>
